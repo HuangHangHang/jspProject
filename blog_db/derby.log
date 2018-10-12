@@ -1,0 +1,7 @@
+Apache Derby Network Server － 10.2.2.0 - (485682) 已启动并且已准备好 2018-06-29 00:04:44.088 GMT 时在端口 1527 上接受连接
+----------------------------------------------------------------
+2018-06-29 00:04:46.880 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.2.2.0 - (485682): instance c013800d-0164-48db-3999-000023b80204
+on database directory C:\Users\wlw\Desktop\Jspproject\blog_db\blogDB  
+
+Database Class Loader started - derby.database.classpath=''

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+<package name="pak" extends="struts-default">
+ <action name="Register" class="com.gxcme.blogProject.Register">
+  <result name="b">/index.jsp</result>
+  <result name="a">/fail.jsp</result>
+  <result name="s">/login.jsp</result>
+  
+  
+ </action>
+
+</package>
+
+
+</struts>    

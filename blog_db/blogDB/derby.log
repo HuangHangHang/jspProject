@@ -1,0 +1,2 @@
+Apache Derby Network Server － 10.2.2.0 - (485682) 已启动并且已准备好 2018-06-26 10:04:07.938 GMT 时在端口 1527 上接受连接
+2018-06-26 10:04:10.824 GMT Thread[DRDAConnThread_3,5,main] (DATABASE = blogDB), (DRDAID = {1}), Database 'blogDB' not found.

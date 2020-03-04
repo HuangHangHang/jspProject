@@ -12,16 +12,16 @@ import com.opensymphony.xwork2.ActionContext;
 
 public class Register {
 	
-	private String re_uname;//êÇ³Æ
-	private String re_upass;//ÃÜÂë
+	private String re_uname;//æ˜µç§°
+	private String re_upass;//å¯†ç 
 	
 	public void setRe_uname(String re_uname) {
 		this.re_uname = re_uname;
 	}
+	
 	public String getRe_uname() {
 		return re_uname;
 	}
-	
 	
 	public void setRe_upass(String re_upass) {
 		this.re_upass = re_upass;
@@ -29,7 +29,6 @@ public class Register {
 	public String getRe_upass() {
 		return re_upass;
 	}
-	
 	
 	private String lo_uname;
 	private String lo_upass;
@@ -49,24 +48,19 @@ public class Register {
 	
 	
 	
-	
-	
-	public String tianjia(){   //ÓÃ»§×¢²á
+	public String tianjia(){   //ç”¨æˆ·æ³¨å†Œ
 		UserTb usertb=new UserTb();
 	if(re_uname==null||"".equals(re_uname.trim())){
-		
 		return "a";
-		
 	}
 	else if(re_upass==null||"".equals(re_upass.trim())){
-		return "a";
-		
+		return "a";	
 	}
 	else{
 		usertb.setUserName(re_uname);
 		usertb.setUserPwd(re_upass);
-		usertb.setUserHeader("images/header_img/s7.jpg");//Ä¬ÈÏÓÃ»§Í·Ïñ
-		usertb.setBlogNumber(0);//Ä¬ÈÏ²©ÎÄÊıÁ¿
+		usertb.setUserHeader("images/header_img/s7.jpg");//é»˜è®¤ç”¨æˆ·å¤´åƒ
+		usertb.setBlogNumber(0);//é»˜è®¤åšæ–‡æ•°é‡
 		Session sess=HibernateSessionFactory.getSession();	
 		Transaction b=sess.beginTransaction(); 
 		sess.save(usertb); 
@@ -82,25 +76,15 @@ public class Register {
 	
 	
 	public String logins()throws Exception {
-
         Session sess=HibernateSessionFactory.getSession();
-        
-        
         sess.beginTransaction();
-		
 		String hql="from UserTb u where u.userName=? and u.userPwd=?" ;
-		
 		Query aaa=sess.createQuery(hql).setParameter(0, this.lo_uname).setParameter(1, this.lo_upass);
-		
 		UserTb user=(UserTb)aaa.uniqueResult();
-		
 		sess.getTransaction().commit();
-		
 		if(user !=null){
 			
-			
-			Map attibutes = ActionContext.getContext().getSession();  //Ê¹ÓÃMap ¶ÔÏóÀ´±£´æÊı¾İ
-			
+			Map attibutes = ActionContext.getContext().getSession();  //ä½¿ç”¨Map å¯¹è±¡æ¥ä¿å­˜æ•°æ®
 			
 			attibutes.put("username", lo_uname); 
 			
@@ -127,7 +111,7 @@ public class Register {
 	}
 	
 	
-	public Boolean fabiao(int id,String title,String centert){  //·¢±í²©ÎÄ
+	public Boolean fabiao(int id,String title,String centert){  //å‘è¡¨åšæ–‡
 		
 	    Session sess=HibernateSessionFactory.getSession();
 	    if(title !=null && title !="")
